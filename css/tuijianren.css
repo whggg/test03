@@ -1,0 +1,85 @@
+@charset 'utf-8';
+.box{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+/*头部*/
+.header{
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background: #3bd78f;
+	text-align: center;
+	height: 1.5rem;
+	color: #fff;
+	line-height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.5rem;
+}
+.header img{
+	position: absolute;
+	left: 0;
+}
+/*内容列表*/
+.tab{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+}
+.tab ol{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	list-style-type: none;
+	color: #3bd78f;
+}
+.tab ol li{
+	width: 25%;
+	float: left;
+	text-align: center;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.45rem;
+}
+.tab ul{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	list-style-type: none;
+}
+.tab ul li span{
+	width: 25%;
+	float: left;
+	text-align: center;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.38rem;
+	display: inline-block;
+}
+/*底部*/
+.footer{
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 0.4rem;
+	z-index: 10;
+	background: #f7f7f7;
+}
+.footer strong{
+	color: #3bd78f;
+}

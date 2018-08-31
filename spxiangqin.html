@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>商品详情页面</title>
+	<script src="js/flexible.debug.js"></script>
+	<script src="js/flexible_css.debug.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/spxiangqin.css">
+</head>
+<body>
+	<div class="box">
+		<!-- 头部 -->
+		<div class="header" onclick="window.history.back();">
+			<img src="img/back.png" alt="">
+			<h1>商品详情</h1>
+		</div>
+		<!-- banner -->
+		<div class="banner">
+			<img src="img/geren.png" alt="">
+		</div>
+		<form action="zhifu.html">
+		<!-- 内容 -->
+			<div class="main">
+				<div class="main_top">
+					<span>级别：个人代理。购买此级别赠送等比例的股份。加油卡、消费积分分每个月10%，总共10个月周期方式进行赠送。</span>
+				</div>
+				<div class="main_con">
+					<span>购买额度：</span>
+					<code class="jian">-</code>
+					<input type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " name="f_order" value="1"/ required="" class="inp" readonly="">
+					<span>万</span>
+					<code class="jia">+</code>
+
+				</div>
+				<div class="main_foot">
+					<h4>超值赠送</h4>
+					<p><b>1</b>万股份</p>
+					<p><b>1</b>万加油卡</p>
+					<p><b>1</b>万消费积分</p>
+				</div>
+			</div>
+		<!-- 购买 -->
+			<div class="footer">
+				<input type="submit" class="submit" value="购买">
+			</div>
+		</form>
+		
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// 减号
+			$('.jian').click(function(event) {
+				var inp =parseInt($('.inp').val());
+				$('.inp').val(parseInt(inp-1));
+				$('.main_foot b').text(parseInt(inp-1));
+				if (inp==1) {
+					$('.inp').val(1)
+					$('.main_foot b').text(1)
+				}
+			});
+			// 加号
+			$('.jia').click(function(event) {
+				var inp =parseInt($('.inp').val());
+				$('.inp').val(parseInt(inp+1));
+				$('.main_foot b').text(parseInt(inp+1));
+				if (inp==2) {
+					$('.inp').val(2)
+					$('.main_foot b').text(2)
+				}
+			});
+		})
+	</script>
+</body>
+</html>

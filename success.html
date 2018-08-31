@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>支付成功页面</title>
+	<script src="js/flexible.debug.js"></script>
+	<script src="js/flexible_css.debug.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		html{
+			width: 100%;
+			min-height: 100%;
+			background: #f8f8f8;
+		}
+		.box{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			text-align: center;
+			position: fixed;
+			top: 20%;
+			font-size: 0.4rem;
+		}
+
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			var time=3;
+			var t=setInterval(function  () {
+				 time--;
+                 $(".box span").html(+time+"秒后返回");
+                 if (time==0) {
+                     clearInterval(t);
+                     window.location.href='shouye.html';
+                 }
+            },1000)
+		})
+	</script>
+</head>
+<body>
+	<div class="box">
+		<img src="img/success.png" alt="">
+		<p>支付成功</p>
+		<span>3秒后返回</span>
+	</div>
+	
+</body>
+</html>

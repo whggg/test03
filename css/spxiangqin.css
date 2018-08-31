@@ -1,0 +1,117 @@
+@charset 'utf-8';
+html{
+	background: #f8f8f8;
+}
+.box{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+/*头部*/
+.header{
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background: #3bd78f;
+	text-align: center;
+	height: 1.5rem;
+	color: #fff;
+	line-height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.5rem;
+}
+.header img{
+	position: absolute;
+	left: 0;
+}
+/*banner*/
+.banner{
+	width: 100%;
+	margin-top: 1.5rem;
+	/*height: 5.5rem;*/
+	overflow: hidden;
+}
+.banner img{
+	width: 100%;
+	/*height: 100%;*/
+}
+/*内容*/
+.main{
+	width: 96%;
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 0.5rem;
+}
+.main .main_top{
+	font-size: 0.4rem;
+	padding:0.1rem 0;
+	margin-bottom: 0.3rem;
+	text-align: justify;
+}
+.main .main_con{
+	width: 100%;
+	margin-bottom: 0.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.main .main_con code{
+	margin: 0 0.1rem;
+}
+.main .main_con span{
+	margin: 0 0.1rem;
+}
+.main .main_con span{
+	font-size: 0.4rem;
+}
+.main .main_con code{
+	border:1px solid #c8c8c8;   
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	text-align: center;
+	line-height: 0.5rem;
+}
+.main .main_con input{
+	width: 2rem;
+	height: 0.5rem;
+	border:1px solid #ccc;
+	text-align: center;
+	font-size: 0.4rem;
+}
+.main .main_foot{
+	width: 100%;
+}
+.main .main_foot h4{
+	font-size: 0.4rem;
+	color: #3bd37f;
+	padding:0.1rem 0;
+}
+.main .main_foot p{
+	font-size: 0.5rem;
+	margin-left: 1rem;
+	padding:0.2rem 0;
+	color: red;
+}
+/*购买*/
+.footer{
+	width: 100%;
+	height: 1.5rem;
+	text-align: center;
+	line-height: 1.5rem;
+	overflow: hidden;
+}
+.footer input{
+	width: 80%;
+	height: 1rem;
+	background: #3bd78f;
+    color: #fff;
+    border-radius: 5px;
+    border:0;
+}

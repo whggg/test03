@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>首页</title>
+	<script src="js/flexible.debug.js"></script>
+	<script src="js/flexible_css.debug.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/shouye.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+</head>
+<body>
+	<div class="box">
+		<!-- 头部 -->
+		<div class="header">
+			<div class="head_left">
+				<h1>宁夏果好枸杞健康产业集团</h1>
+			</div>
+		<!-- 	<div class="head_right head_denglu">
+				<span>欢迎</span>
+				<span>13629501406</span>
+				<a href="">注销</a>
+			</div> -->
+			<div class="head_right">
+				<a href="index.html">登录</a>
+			</div>
+		</div>
+		<!-- banner图 -->
+		<div class="banner">
+			<div class="banner_img">
+				<img src="img/banner.jpg" alt="">
+			</div>
+		</div>
+		
+		<!-- 进度条 -->
+		<article class="jq22-container">
+			<header class="jq22-header">
+				<h1 class="lunshu">首轮股东众筹</h1><strong class="zonge">16000</strong><h1>万</h1>
+			</header>
+			<div class="jq22-content">
+				  <svg id="container"></svg>
+			</div>
+			<p style="font-size: 0.4rem;">当前已达到<strong style="color: red;" class="yida">500</strong>万</p>
+			
+		</article>
+		<!-- 产品区域 -->
+		<div class="main">
+			<div class="main_top">
+				<h4>系位列表</h4>
+			</div>
+			<div class="main_con">
+				<ul>
+					<li><a href="spxiangqin.html">
+						<div class="li_left"><h5>个人代理</h5><p>1-2万油卡</p><p>1-2万股</p><p>1-2万消费积分</p><span>1-2万元</span></div>
+						<div class="li_right"><img src="img/geren.png" alt=""></div>
+					</a></li>
+						<li><a href="spxiangxi2.html">
+						<div class="li_left"><h5>服务中心代理</h5><p>4.5万油卡</p><p>4.5万股</p><p>4.5万消费积分</p><span>3万元</span></div>
+						<div class="li_right"><img src="img/fuwuzhongxin.png" alt=""></div>
+					</a></li>
+					<li><a href="spxiangxi3.html">
+						<div class="li_left"><h5>区/县代理</h5><p>15万油卡</p><p>15万股</p><p>15万消费积分</p><span>10万元</span></div>
+						<div class="li_right"><img src="img/xian.png" alt=""></div>
+					</a></li>
+					<li><a href="spxiangxi4.html">
+						<div class="li_left"><h5>市代理</h5><p>150万油卡</p><p>150万股</p><p>150万消费积分</p><span>100万元</span></div>
+						<div class="li_right"><img src="img/shi.png" alt=""></div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 底部导航 -->
+		<div class="footer">
+			<ul>
+				<li><a href="shouye.html" class="active"><img src="img/shouye.png" alt=""><span>首页</span></a></li>
+				<li><a href="tuijianren.html"><img src="img/tuijian01.png" alt=""><span>推荐</span></a></li>
+				<li><a href="gerenzhongxin.html"><img src="img/wode01.png" alt=""><span>我的</span></a></li>
+				<li><a href="fujin.html"><img src="img/fujin01.png" alt=""><span>附近</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.progress.js"></script>
+	<script type="text/javascript">
+		var zonge = $('.zonge').text();
+		var yida = $('.yida').text();
+		var s=0;
+		var r=parseFloat(zonge/500);
+		s=parseFloat(yida/zonge*100);
+		// 求指数
+		var x=2;
+		var y=Math.log(r)/Math.log(x);
+		var i=parseInt(parseInt(y)+1);
+		if (r==1) {
+			$('.lunshu').html("首轮股东众筹");
+		}else {
+			$('.lunshu').html("第"+i+"轮股东众筹");
+		}
+		function jinDu(){
+	        var progress = $("#container").Progress({
+		        percent: s,
+		        width: 300,
+		        height: 40,
+		        fontSize: 16
+	     	});
+		}jinDu();
+
+    </script>
+</body>
+</html>
